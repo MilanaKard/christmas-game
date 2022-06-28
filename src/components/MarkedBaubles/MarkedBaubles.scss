@@ -1,0 +1,54 @@
+.favorites-aside {
+    height: 100%;
+    min-height: 750px;
+    width: 400px;
+    .favorites-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 25px;
+    }
+
+    .favorites-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        max-width: 84px;
+        min-height: 84px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .favorites-count {
+        z-index: 10;
+        align-self: flex-end;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-left: 60px;
+        border-radius: 10px;
+        background-color: #24c5db;
+        font-size: 14px;
+        font-weight: 900;
+    }
+}
+
+.favorites-card-img {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    cursor: move;
+}

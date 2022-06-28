@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    font-family: 'Neucha', cursive;
+}
+
+
+#main {
+    height: calc(100vh - 180px);
+    display: flex;
+}
+
+a,
+button {
+    all: unset;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    border: #ffffff solid 1px;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.hidden {
+    display: none;
+}
+
+

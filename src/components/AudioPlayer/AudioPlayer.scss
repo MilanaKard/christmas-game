@@ -1,0 +1,13 @@
+.sound {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-image: url('/assets/svg/audio.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.mute {
+    background-image: url('/assets/svg/mute.svg');
+}

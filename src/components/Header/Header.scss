@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #192f2d;
+    height: 90px;
+    column-gap: 30px;
+
+    .button:hover {
+        filter: invert(20%);
+        border: none;
+    }
+
+    .logo {
+        margin-top: 10px;
+        width: 30px;
+        height: 40px;
+        background-image: url('/assets/svg/tree.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .logo:hover {
+        filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(141deg) brightness(89%) contrast(90%);
+    }
+
+    a {
+        position: relative;
+        display: block;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 20px;
+        transition: 0.3s;
+    }
+}

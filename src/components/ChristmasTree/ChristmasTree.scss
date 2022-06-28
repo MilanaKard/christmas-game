@@ -1,0 +1,193 @@
+.main-tree-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url('/assets/bg/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    width: 800px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: background-image 1s ease-in-out;
+
+    .droppable {
+        position: absolute;
+    }
+
+    .droppable1 {
+        width: 400px;
+        height: 300px;
+    }
+
+    .droppable2 {
+        bottom: 300px;
+        width: 250px;
+        height: 300px;
+    }
+    .droppable3 {
+        bottom: 600px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .main-tree {
+        display: block;
+        width: 500px;
+        height: 714px;
+    }
+    .snow {
+        background-image: url('/assets/svg/snow.svg');
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 15s;
+        animation-name: fall;
+    }
+
+    .garland-tree-container {
+        display: flex;
+        justify-content: center;
+        height: calc(100vh - 140px);
+        width: 800px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -400px;
+        pointer-events: none;
+        z-index: 90;
+        overflow: hidden;
+        visibility: visible;
+    }
+
+    .lightrope {
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+        border-radius: 50%;
+        padding: 0;
+        list-style: none;
+        margin: 50px auto 0;
+    }
+
+    .lightrope li {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        margin: -5px;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+
+    .lightrope li:nth-child(2n + 1) {
+        animation-duration: 1.8s;
+    }
+
+    .lightrope li:nth-child(4n + 2) {
+        animation-duration: 1.1s;
+    }
+
+    .lightrope li:nth-child(3n + 1) {
+        animation-duration: 1.4s;
+    }
+
+    .garland-tree-container.multicolor > .lightrope li:nth-child(1n + 1) {
+        animation-name: red;
+    }
+    .garland-tree-container.multicolor > .lightrope li:nth-child(2n + 2) {
+        animation-name: green;
+    }
+    .garland-tree-container.multicolor > .lightrope li:nth-child(3n + 3) {
+        animation-name: blue;
+    }
+    .garland-tree-container.multicolor > .lightrope li:nth-child(4n + 4) {
+        animation-name: yellow;
+    }
+
+    .garland-tree-container.blue > .lightrope li {
+        animation-name: blue;
+    }
+
+    .garland-tree-container.green > .lightrope li {
+        animation-name: green;
+    }
+
+    .garland-tree-container.yellow > .lightrope li {
+        animation-name: yellow;
+    }
+
+    .garland-tree-container.red > .lightrope li {
+        animation-name: red;
+    }
+
+    .garland-tree-container.hidden {
+        visibility: hidden;
+    }
+    @keyframes fall {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            transform: translate3d(780px, 780px, 0);
+        }
+    }
+
+    @keyframes green {
+        0%,
+        100% {
+            background: rgba(0, 247, 165, 1);
+            box-shadow: 0px 2px 12px 2px rgba(0, 247, 165, 1);
+        }
+        50% {
+            background: rgba(0, 247, 165, 0.4);
+            box-shadow: 0px 2px 12px 2px rgba(0, 247, 165, 0.2);
+        }
+    }
+    @keyframes blue {
+        0%,
+        100% {
+            background: rgba(0, 255, 255, 1);
+            box-shadow: 0px 2px 12px 2px rgba(0, 255, 255, 1);
+        }
+        50% {
+            background: rgba(0, 255, 255, 0.4);
+            box-shadow: 0px 2px 12px 2px rgba(0, 255, 255, 0.2);
+        }
+    }
+    @keyframes red {
+        0%,
+        100% {
+            background: rgba(247, 0, 118, 1);
+            box-shadow: 0px 2px 12px 2px rgba(247, 0, 118, 1);
+        }
+        50% {
+            background: rgba(247, 0, 118, 0.4);
+            box-shadow: 0px 2px 12px 2px rgba(247, 0, 118, 0.2);
+        }
+    }
+    @keyframes yellow {
+        0%,
+        100% {
+            background: rgba(255, 255, 0, 1);
+            box-shadow: 0px 2px 12px 2px rgba(255, 255, 0, 1);
+        }
+        50% {
+            background: rgba(255, 255, 0, 0.4);
+            box-shadow: 0px 2px 12px 2px rgba(255, 255, 0, 0.2);
+        }
+    }
+}
