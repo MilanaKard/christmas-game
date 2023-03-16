@@ -6,36 +6,40 @@
     background-image: url('/assets/bg/1.jpg');
     background-size: cover;
     background-position: center;
-    height: 800px;
-    width: 800px;
-    padding-bottom: 20px;
+    height: 80rem;
+    width: 80rem;
+    padding-bottom: 2rem;
     overflow: hidden;
     transition: background-image 1s ease-in-out;
+    @media (max-width: 620px) {
+        order: 3;
+        width: 100%;
+    }
 
     .droppable {
         position: absolute;
     }
 
     .droppable1 {
-        width: 400px;
-        height: 300px;
+        width: 40rem;
+        height: 30rem;
     }
 
     .droppable2 {
-        bottom: 300px;
-        width: 250px;
-        height: 300px;
+        bottom: 30rem;
+        width: 25rem;
+        height: 30rem;
     }
     .droppable3 {
-        bottom: 600px;
-        width: 120px;
-        height: 120px;
+        bottom: 60rem;
+        width: 12rem;
+        height: 12rem;
     }
 
     .main-tree {
         display: block;
-        width: 500px;
-        height: 714px;
+        width: 50rem;
+        height: 71.4rem;
     }
     .snow {
         background-image: url('/assets/svg/snow.svg');
@@ -51,12 +55,12 @@
     .garland-tree-container {
         display: flex;
         justify-content: center;
-        height: calc(100vh - 140px);
-        width: 800px;
+        height: calc(100vh - 14rem);
+        width: 80rem;
         position: absolute;
-        top: 20px;
+        top: 2rem;
         left: 50%;
-        margin-left: -400px;
+        margin-left: -40rem;
         pointer-events: none;
         z-index: 90;
         overflow: hidden;
@@ -74,7 +78,7 @@
         border-radius: 50%;
         padding: 0;
         list-style: none;
-        margin: 50px auto 0;
+        margin: 5rem auto 0;
     }
 
     .lightrope li {
@@ -84,10 +88,10 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        width: 5px;
-        height: 5px;
+        width: 0.5rem;
+        height: 0.5rem;
         border-radius: 50%;
-        margin: -5px;
+        margin: -0.5rem;
         animation-fill-mode: both;
         animation-iteration-count: infinite;
         animation-duration: 2s;
@@ -142,7 +146,7 @@
             transform: translate3d(0, 0, 0);
         }
         100% {
-            transform: translate3d(780px, 780px, 0);
+            transform: translate3d(78rem, 78rem, 0);
         }
     }
 
@@ -150,44 +154,44 @@
         0%,
         100% {
             background: rgba(0, 247, 165, 1);
-            box-shadow: 0px 2px 12px 2px rgba(0, 247, 165, 1);
+            box-shadow: 0 2px 12px 2px rgba(0, 247, 165, 1);
         }
         50% {
             background: rgba(0, 247, 165, 0.4);
-            box-shadow: 0px 2px 12px 2px rgba(0, 247, 165, 0.2);
+            box-shadow: 0 2px 12px 2px rgba(0, 247, 165, 0.2);
         }
     }
     @keyframes blue {
         0%,
         100% {
             background: rgba(0, 255, 255, 1);
-            box-shadow: 0px 2px 12px 2px rgba(0, 255, 255, 1);
+            box-shadow: 0 2px 12px 2px rgba(0, 255, 255, 1);
         }
         50% {
             background: rgba(0, 255, 255, 0.4);
-            box-shadow: 0px 2px 12px 2px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 2px 12px 2px rgba(0, 255, 255, 0.2);
         }
     }
     @keyframes red {
         0%,
         100% {
             background: rgba(247, 0, 118, 1);
-            box-shadow: 0px 2px 12px 2px rgba(247, 0, 118, 1);
+            box-shadow: 0 2px 12px 2px rgba(247, 0, 118, 1);
         }
         50% {
             background: rgba(247, 0, 118, 0.4);
-            box-shadow: 0px 2px 12px 2px rgba(247, 0, 118, 0.2);
+            box-shadow: 0 2px 12px 2px rgba(247, 0, 118, 0.2);
         }
     }
     @keyframes yellow {
         0%,
         100% {
             background: rgba(255, 255, 0, 1);
-            box-shadow: 0px 2px 12px 2px rgba(255, 255, 0, 1);
+            box-shadow: 0 2px 12px 2px rgba(255, 255, 0, 1);
         }
         50% {
             background: rgba(255, 255, 0, 0.4);
-            box-shadow: 0px 2px 12px 2px rgba(255, 255, 0, 0.2);
+            box-shadow: 0 2px 12px 2px rgba(255, 255, 0, 0.2);
         }
     }
 }

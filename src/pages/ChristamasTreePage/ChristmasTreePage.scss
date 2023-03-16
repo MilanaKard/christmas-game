@@ -2,19 +2,22 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1600px;
+    max-width: 160rem;
     margin: 0 auto;
     padding: 0;
+    @media (max-width: 620px) {
+        flex-direction: column;
+    }
 
     .menu-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 1rem;
         width: 100%;
         justify-content: flex-start;
         align-items: flex-start;
         align-content: flex-start;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
 
     .favorites-menu {
@@ -22,9 +25,14 @@
         flex-wrap: wrap;
         align-items: flex-start;
         align-content: flex-start;
-        height: 100%;
-        width: 400px;
-        padding: 25px 10px 0;
+        height: fit-content;
+        width: 40rem;
+        padding: 2.5rem 1rem 0;
+        @media (max-width: 620px) {
+            order: 1;
+            width: 100%;
+        }
+        
     }
 
     .favorites-container::before,
@@ -33,9 +41,9 @@
     .garland-container::before {
         content: 'Игрушки';
         width: 100%;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 400;
-        padding: 10px;
+        padding: 1rem;
         padding-left: 0;
         text-transform: uppercase;
     }

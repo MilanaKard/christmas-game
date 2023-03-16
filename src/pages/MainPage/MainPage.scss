@@ -1,23 +1,32 @@
 .main-container {
     margin: auto;
-    height: 417px;
+    min-height: 62.8rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
+    padding: 2rem;
+    width: 100%;
+    @media (max-width: 540px) {
+        min-height: 45rem;
+     }
+  
     .main-title {
-        padding: 65px 0;
-        width: 593px;
-        font-size: 53px;
+        padding: 6.5rem 0;
+        width: 59.3rem;
+        font-size: 5.3rem;
         text-transform: uppercase;
+        margin-bottom: 19rem;
+        @media (max-width: 540px) {
+            width: 40rem;
+        }
     }
 
     .main-button {
-        line-height: 54px;
-        width: 320px;
-        height: 54px;
-        font-size: 24px;
+        line-height: 5.4rem;
+        width: 32rem;
+        height: 5.4rem;
+        font-size: 2.4rem;
         font-family: sans-serif;
     }
 
@@ -26,7 +35,7 @@
         background: radial-gradient(rgba(36, 197, 219, 0.1) 0%, rgba(36, 197, 219, 0.2) 100%);
         backdrop-filter: blur(6px);
         border: #24c5db solid 1px;
-        border-radius: 30px;
+        border-radius: 3rem;
         text-align: center;
     }
 
@@ -36,19 +45,26 @@
         justify-content: flex-end;
         align-items: center;
         z-index: -1;
+        @media (max-width: 540px) {
+            display: none;
+         }
+      
     }
     .big-bauble-container {
-        top: 0px;
-        left: calc(50% - 550px);
-        width: 418px;
-        height: 768px;
+        top: 0;
+        left: calc(50% - 55rem);
+        width: 41.8rem;
+        height: 76.8rem;  
+        @media (max-width: 1050px) {
+            left: calc(50% - 40rem);
+        } 
     }
 
     .small-bauble-container {
-        top: 95px;
-        left: calc(50% + 100px);
-        width: 246px;
-        height: 446px;
+        top: 9.5rem;
+        left: calc(50% + 10rem);
+        width: 24.6rem;
+        height: 44.6rem;    
     }
 
     .main-bauble {

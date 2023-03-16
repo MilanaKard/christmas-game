@@ -1,40 +1,40 @@
 .select {
-    width: 48px;
-    height: 60px;
+    width: 4.8rem;
+    height: 6rem;
     background-image: url('/assets/svg/ball-2.svg');
-    background-size: 48px 60px;
-    background-position: left -8px;
+    background-size: 4.8rem 6rem;
+    background-position: left -0.8rem;
     background-repeat: no-repeat;
     transition: 0.3s;
 }
 
 .select span {
     display: inline-block;
-    min-width: 40px;
-    height: 40px;
-    margin-top: 10px;
-    margin-left: 4px;
+    min-width: 4rem;
+    height: 4rem;
+    margin-top: 1rem;
+    margin-left: 0.4rem;
     border-radius: 50%;
     text-align: center;
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 4rem;
+    font-size: 2rem;
     background-color: #24c5db;
 }
 
 .search {
     outline: 0;
-    width: 253px;
-    height: 36px;
-    padding: 3px 50px 3px 15px;
-    border-radius: 20px;
+    width: 25.3rem;
+    height: 3.6rem;
+    padding: 0.3rem 5rem 0.3rem 1.5rem;
+    border-radius: 2rem;
     border: 1px solid #24c5db;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
     background-color: rgba(31, 112, 127, 0.3);
     background-image: url('/assets/svg/search.svg');
-    background-size: 24px;
+    background-size: 2.4rem;
     background-repeat: no-repeat;
-    background-position: 210px center;
+    background-position: 21rem center;
     backdrop-filter: blur(6px);
 }
 
@@ -44,8 +44,8 @@ input::placeholder {
 .filters,
 .sort,
 .header-settings {
-    width: 480px;
-    padding: 10px 20px;
+    width: 48rem;
+    padding: 1rem 2rem;
     backdrop-filter: blur(6px);
 }
 
@@ -53,14 +53,21 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
 }
 .settings {
-    margin-right: 36px;
-    height: 100%;
+    margin-right: 3.6rem;
+    height: fit-content;
     background-color: rgba(31, 112, 127, 0.3);
     backdrop-filter: blur(6px);
+    @media (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
 }
 .sort,
 .bauble-buttons-container {
@@ -70,41 +77,42 @@ input::placeholder {
 }
 .title {
     width: 100%;
-    padding: 50px 0 36px;
+    padding: 5rem 0 3.6rem;
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: 4.2rem;
+    text-align: center;
 }
 .settings-title {
     display: block;
-    font-size: 20px;
-    height: 60px;
-    line-height: 60px;
+    font-size: 2rem;
+    height: 6rem;
+    line-height: 6rem;
     text-transform: uppercase;
 }
 
 .settings-text {
-    font-size: 18px;
-    line-height: 35px;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
 }
 
 .sort-select {
     appearance: none;
     outline: 0;
     font: inherit;
-    width: 300px;
-    height: 40px;
-    padding: 5px 25px;
-    margin: 10px 0;
+    width: 30rem;
+    height: 4rem;
+    padding: 0.5rem 2.5rem;
+    margin: 1rem 0;
     background-color: rgba(31, 112, 127, 0.3);
     background-image: url('/assets/svg/arrow-down.svg');
-    background-size: 20px;
+    background-size: 2rem;
     background-repeat: no-repeat;
     background-position: 262px center;
     backdrop-filter: blur(6px);
-    border-radius: 20px;
+    border-radius: 2rem;
     border: #24c5db solid 1px;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
     color: #fff;
     cursor: pointer;
 }
@@ -114,21 +122,21 @@ input::placeholder {
 }
 
 input[type='range'] {
-    margin: 10px;
+    margin: 1rem;
 }
 
 output {
-    margin: 10px 0;
+    margin: 1rem 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-width: 80px;
-    height: 40px;
+    min-width: 8rem;
+    height: 4rem;
 }
 
 .sound {
-    top: 60px;
-    left: 20px;
+    top: 6rem;
+    left: 2rem;
     &:hover {
         filter: invert(20%);
         border: none !important;
@@ -137,12 +145,12 @@ output {
 
 .slider {
     display: inline-block;
-    height: 6px;
+    height: 0.6rem;
     width: 90%;
 }
 
 .slider-container {
-    margin-top: 20px;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,9 +172,9 @@ output {
 
 .shape button {
     position: relative;
-    width: 40px;
-    height: 40px;
-    margin: 10px 7px;
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem 0.7rem;
     border: 0;
     outline: 0;
     background-color: transparent;
@@ -177,7 +185,7 @@ output {
     transition: 0.3s;
 }
 .shape button:nth-child(5) {
-    width: 50px;
+    width: 5rem;
 }
 .shape button:hover {
     filter: invert(20%);
@@ -187,7 +195,7 @@ output {
 }
 .shape button:nth-child(1) {
     background-image: url('/assets/svg/ball.svg');
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 .shape button:nth-child(2) {
     background-image: url('/assets/svg/bell.svg');
@@ -204,11 +212,11 @@ output {
 
 .color button {
     position: relative;
-    width: 30px;
-    height: 30px;
-    margin: 15px 10px;
+    width: 3rem;
+    height: 3rem;
+    margin: 1.5rem 1rem;
     border: #24c5db solid 1px;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     outline: 0;
     background-color: transparent;
     cursor: pointer;
@@ -236,18 +244,18 @@ output {
     content: '';
     display: block;
     position: absolute;
-    top: 5px;
-    left: 9px;
-    width: 6px;
-    height: 10px;
+    top: 0.5rem;
+    left: 0.9rem;
+    width: 0.6rem;
+    height: 1rem;
     border: solid #000000;
-    border-width: 0 4px 4px 0;
+    border-width: 0 0.4rem 0.4rem 0;
     transform: rotate(45deg);
 }
 
 .color button:nth-child(1) {
     background-color: #ffffff;
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 .color button:nth-child(2) {
     background-color: #fdd700;
@@ -264,9 +272,9 @@ output {
 
 .size button {
     position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 5px 5px;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem 0.5rem;
     border: 0;
     outline: 0;
     background-image: url('/assets/svg/ball.svg');
@@ -284,10 +292,10 @@ output {
     filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg) brightness(83%) contrast(88%);
 }
 .size button:nth-child(1) {
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 .size button:nth-child(2) {
-    background-size: 40px 40px;
+    background-size: 4rem 4rem;
 }
 .size button:nth-child(3) {
     background-size: 32px 32px;
@@ -298,7 +306,7 @@ output {
 .form-group {
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 6rem;
     margin: 0;
 }
 
@@ -311,12 +319,12 @@ output {
 .favorite-input-label {
     position: relative;
     display: flex;
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.5rem;
     backdrop-filter: blur(6px);
     border: 1px solid #24c5db;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -334,34 +342,34 @@ output {
     content: '';
     display: block;
     position: absolute;
-    top: 5px;
-    left: 9px;
-    width: 6px;
-    height: 10px;
+    top: 0.5rem;
+    left: 0.9rem;
+    width: 0.6rem;
+    height: 1rem;
     border: solid #000000;
-    border-width: 0 4px 4px 0;
+    border-width: 0 0.4rem 0.4rem 0;
     transform: rotate(45deg);
 }
 
 .bauble-button {
-    width: 200px;
-    height: 36px;
-    margin: 10px 0 50px;
-    border-radius: 20px;
+    width: 20rem;
+    height: 3.6rem;
+    margin: 1rem 0 5rem;
+    border-radius: 2rem;
     border: #24c5db solid 1px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: center;
 }
 
 .noUi-handle {
-    width: 20px !important;
-    height: 20px !important;
-    border-radius: 100px !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 10rem !important;
     cursor: pointer !important;
 }
 .noUi-horizontal {
-    height: 6px !important;
+    height: 0.6rem !important;
 }
 .noUi-handle:before,
 .noUi-handle:after {

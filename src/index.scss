@@ -3,12 +3,19 @@
     box-sizing: border-box;
     font-weight: 400;
 }
+html {
+    font-size: 5px;
+    @media (min-width: 375px) {
+        font-size: 7px;
+      }
+      @media (min-width: 769px) {
+        font-size: 10px;
+    }
+}
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     color: white;
     background-image: url('./assets/bg.jpg');
     background-size: cover;
@@ -17,7 +24,7 @@ body {
 
 
 #main {
-    height: calc(100vh - 180px);
+    min-height: calc(100vh - 18rem);
     display: flex;
 }
 
