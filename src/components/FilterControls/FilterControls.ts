@@ -7,6 +7,7 @@ import '../../../node_modules/nouislider/dist/nouislider.css';
 interface FilterControlsOptions {
     onChange(): void;
     onUpdate(): void;
+    audioButton: HTMLButtonElement;
 }
 
 class FilterControls implements Component {
@@ -19,10 +20,12 @@ class FilterControls implements Component {
     private sortHandler = this.onSort.bind(this);
     private sliderHandler = this.onSliderChange.bind(this);
     private checkboxHandler = this.onCheckboxChange.bind(this);
+    private audioButton: HTMLButtonElement;
 
     constructor(options: FilterControlsOptions) {
         this.options = options;
         this.state = AppState.getInstance();
+        this.audioButton = options.audioButton;  
     }
 
     private onSliderChange(values: (string | number)[], type: string) {
@@ -78,12 +81,12 @@ class FilterControls implements Component {
 
     public async render() {
         const view = `
-          <div class="header-settings">
-          <button id="audio-control"></button>
-              <input class="search" autocomplete="off" onfocus="(this.type='search')"
-              onblur="(this.type='text')"
-              placeholder="Поиск" value="${this.state.settings.search}">
-              <div class="select"><span id="marked">${this.state.settings.marked.length}</span></div>
+          <div class="header-settings" id="search-audio-container">
+            <button id="audio-control"></button>
+            <input class="search" autocomplete="off" onfocus="(this.type='search')"
+            onblur="(this.type='text')"
+            placeholder="Поиск" value="${this.state.settings.search}">
+            <div class="select"><span id="marked">${this.state.settings.marked.length}</span></div>
          </div>
         <div class="sort">
           <h3 class="settings-title">Сортировать</h3>
@@ -164,6 +167,8 @@ class FilterControls implements Component {
         const resetFilters = <HTMLButtonElement>document.querySelector('.reset-filters');
         const count = <noUiSlider.target>document.querySelector('.count-slider');
         const year = <noUiSlider.target>document.querySelector('.year-slider');
+        const headerSettings = <HTMLDivElement>document.getElementById('search-audio-container');
+        headerSettings.prepend(this.audioButton);
 
         noUiSlider.create(count, {
             start: this.state.settings.count,

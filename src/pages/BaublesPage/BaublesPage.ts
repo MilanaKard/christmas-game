@@ -24,6 +24,8 @@ class BaublesPage extends Page {
     }
 
     private async renderControls() {
+        const audioButton = document.createElement('button');
+        this.addAudio(audioButton);
         const controlsContainer = <HTMLDivElement>document.getElementById('settings');
         await Drawer.drawBlock(FilterControls, controlsContainer, {
             onChange: async () => {
@@ -32,6 +34,7 @@ class BaublesPage extends Page {
             onUpdate: async () => {
                 await this.renderControls();
             },
+            audioButton
         });
     }
 
@@ -55,8 +58,6 @@ class BaublesPage extends Page {
     }
 
     public async afterRender() {
-        const audioContainer = <HTMLButtonElement>document.getElementById('audio-control');
-        this.addAudio(audioContainer);
         this.addPopup('Все 20 слотов заполнены.');
         const baublesContainer = <HTMLDivElement>document.getElementById('baubles-container');
         baublesContainer.addEventListener('click', (ev: MouseEvent) => this.baubleClickHandler(ev));
