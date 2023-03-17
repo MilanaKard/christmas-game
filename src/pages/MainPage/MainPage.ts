@@ -6,7 +6,7 @@ class MainPage extends Page {
         const view = `
       <div class="main-container">
         <h1 class="main-title">Наряди елку</h1>
-        <a class="button main-button" href="/#baubles">Начать</a>
+        <a class="button main-button" href="#baubles">Начать</a>
         <div class="main-bauble-container big-bauble-container">
           <div class="thread"></div>
           <div class="main-bauble"></div>

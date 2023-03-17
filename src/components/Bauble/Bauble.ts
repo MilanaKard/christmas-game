@@ -20,7 +20,7 @@ class Bauble {
         const view = `
           <div class="bauble-container active" data-num="${this.options.num}">
             <h3>${this.options.name}</h3>
-            <img class="bauble-img" src="/assets/toys/${this.options.num}.png" alt="${this.options.name}">
+            <img class="bauble-img" src="assets/toys/${this.options.num}.png" alt="${this.options.name}">
             <p>Количество: ${this.options.count}</p>
             <p>Год покупки: ${this.options.year}</p>
             <p>Форма игрушки: ${this.options.shape}</p>
